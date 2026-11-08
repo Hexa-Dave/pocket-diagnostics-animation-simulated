@@ -1,0 +1,150 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Segoe UI', sans-serif;
+  background: #062d3b;
+  color: #eefcff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #062d3b;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  min-height: 100vh;
+  background: #062d3b;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.stage-host {
+  position: absolute;
+  inset: 0;
+}
+
+.stage-host canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.simulated-tag {
+  position: absolute;
+  left: 470px;
+  top: 18px;
+  z-index: 11;
+  background: rgba(10, 36, 47, 0.75);
+  border: 1px solid rgba(122, 226, 255, 0.65);
+  color: #dff9ff;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.conversation-controls {
+  position: absolute;
+  z-index: 12;
+  width: 340px;
+  height: 220px;
+  transform-origin: top left;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px 16px;
+  overflow: hidden;
+  border: 2px solid rgba(71, 127, 141, 0.95);
+  border-radius: 16px;
+  background: #08232e;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
+  color: #eefcff;
+}
+
+.conversation-controls[hidden] {
+  display: none;
+}
+
+.conversation-controls h2 {
+  margin: 0;
+  color: #7ce5f0;
+  font-size: var(--conversation-font-13, 13px);
+  letter-spacing: 0.05em;
+}
+
+.conversation-history {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  font-size: var(--conversation-font-13, 13px);
+  line-height: 1.35;
+}
+
+.conversation-history p {
+  margin: 5px 0;
+}
+
+.conversation-history strong {
+  color: #9cf6ff;
+}
+
+.conversation-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.conversation-controls button {
+  border: 1px solid rgba(122, 226, 255, 0.8);
+  border-radius: 7px;
+  padding: 5px 8px;
+  background: #103d49;
+  color: #eefcff;
+  font: inherit;
+  font-size: var(--conversation-font-11, 11px);
+  cursor: pointer;
+}
+
+.conversation-controls button:hover,
+.conversation-controls button:focus-visible {
+  border-color: #9cf6ff;
+  background: #185567;
+  outline: 2px solid #9cf6ff;
+  outline-offset: 1px;
+}
+
+.conversation-reply-form {
+  display: flex;
+  gap: 6px;
+}
+
+.conversation-reply-form[hidden] {
+  display: none;
+}
+
+.conversation-reply-form input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid #477f8d;
+  border-radius: 7px;
+  padding: 6px 8px;
+  background: #041d2e;
+  color: #eefcff;
+  font: inherit;
+  font-size: var(--conversation-font-12, 12px);
+}

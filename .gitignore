@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+.vite/
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# OS metadata
+.DS_Store
+Thumbs.db
